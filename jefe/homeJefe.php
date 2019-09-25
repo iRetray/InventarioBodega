@@ -1,7 +1,3 @@
-<?php  
-echo "Usuario1";
-?>
-
 <?php
 
 session_start();
@@ -35,7 +31,7 @@ if($nombre==""){
 	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
 	<link href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-	<title>Administrador</title>
+	<title>Jefe de Inventario</title>
 </head>
 <body>
 <section class="section" align="center">
@@ -47,8 +43,8 @@ if($nombre==""){
 				<table class="tablaIzquierda" align="center">
 					<tr class="fila1" align="center">
 						<td class="columna1">
-							<p class="textosGrandes">Administrador del sistema</p>
-							<img src="../resources/admin.png" class="imgAdmin">
+							<p class="textosGrandes">Jefe de Inventario</p>
+							<img src="../resources/inventario.png" class="imgAdmin">
 							<hr width="80%">
 							<p><span class="textoOscuro">Nombre: </span><span class="textoMedio"><?php
 								echo "$nombre";
