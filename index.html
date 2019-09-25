@@ -1,0 +1,74 @@
+<?php
+session_destroy();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<title>Login</title>
+</head>
+<body>
+
+<section class="section" align="center">
+	<table class="tabla2" align="center">
+		<tr class="trind">
+			<td class="tdind1">
+				<img src="resources/bodega.jpg" class="imagen1">
+			</td>
+			<td class="tdind2">
+				<table class="tabla1" align="center">
+						<tr class="fila1" align="center">
+						<td class="columna1">
+				<p class="textosGrandes">Inicia Sesión</p>
+				<p class="textoNormal">¿No tienes una cuenta? <br>Comunícate con un administrador. </p>
+				<br>
+			</td>
+		</tr>
+		<form action="extPages/verificarUsuario.php" method="post">
+		<tr class="fila1">
+			<td class="columna1">
+				<input type="text" name="usuario" id="usuario" placeholder="Tu usuario" class="cajasRegistro" required="true">
+			</td>
+		</tr>
+		<tr class="fila1">
+			<td class="columna1">
+				<input type="password" name="pass" id="pass" placeholder="Tu clave" class="cajasRegistro" required="true">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<br>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<br>
+			</td>
+		</tr>
+		<tr class="fila1">
+			<td class="columna1">
+				<input type="submit" value="Iniciar Sesión" class="cajasRegistro2" required="true">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<br>
+			</td>
+		</tr>
+		</form>
+	</table>
+			</td>
+		</tr>
+	</table>
+</section>
+
+<section class="section" align="center">
+	
+</section>
+</body>
+</html>
