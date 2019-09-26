@@ -78,6 +78,21 @@ if($nombre==""){
 							<p class="textoNormal1">Agrega elementos al inventario, añadiendo unidades a productos existentes.</p>
 						</td>
 					</tr>
+
+					<tr class="fila1">
+							<td class="columna22">
+							<div align="center">
+							<form action="../inventario.php" method="post">
+									<input type="image" src="../resources/caja.png" width="150px" align="center" class="imgTop">
+
+									<p class="textoOscuro" align="center">Ver inventario</p>
+							</form>
+						</div>
+						</td>
+						<td class="columna22b">
+							<p class="textoNormal1">Ver los elementos de cada bodega y sus especificaciones</p>
+						</td>
+					</tr>
 					
 					
 				</table>
