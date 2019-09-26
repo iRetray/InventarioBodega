@@ -25,26 +25,26 @@ if($nombre==""){
 	<link rel="stylesheet" type="text/css" href="../../css/estilos.css">
 	<link href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-	<title>Eliminar usuario</title>
+	<title>Eliminar producto</title>
 </head>
 <body>
 <section class="section" align="center">
 	<table class="tablaCrear" align="center">
 		<tr class="fila1" align="center">
 			<td class="columna1">
-				<p class="textosGrandes">Elimina un usuario</p>
-				<p class="textoNormal">Completa los campos para eliminar un usuario:</p>
+				<p class="textosGrandes">Elimina un producto</p>
+				<p class="textoNormal">Completa los campos para eliminar un producto:</p>
 			</td>
 		</tr>
 		<form action="eliminarUsuarioVerificar.php" method="post" id="form1">
 		<tr class="fila1">
 			<td class="columna1" align="center">
-				<input type="text" name="usuario" id="usuario" placeholder="Usuario del empleado" class="cajasRegistro" required="true">
-			</td>		
+				<input type="text" name="producto" id="producto" placeholder="Nombre del producto" class="cajasRegistro" required="true">
+			</td>
 		</tr>
 		<tr class="fila1">
 			<td class="columna1" align="center">
-				<input type="submit" value="Eliminar usuario" class="cajasRegistro22" required="true">
+				<input type="submit" value="Eliminar producto" class="cajasRegistro22" required="true">
 			</td>
 		</tr>
 		<tr>

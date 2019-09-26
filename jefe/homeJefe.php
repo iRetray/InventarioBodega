@@ -80,7 +80,7 @@ if($nombre==""){
 					<tr class="fila1">
 							<td class="columna22">
 							<div align="center">
-							<form action="eliminarUsuario.php" method="post">
+							<form action="eliminar/eliminarUsuario.php" method="post">
 									<input type="image" src="../resources/borrar.png" width="100px" align="center" class="imgTop">
 
 									<p class="textoOscuro" align="center">Eliminar producto</p>
@@ -88,7 +88,7 @@ if($nombre==""){
 						</div>
 						</td>
 						<td class="columna22b">
-							<p class="textoNormal1">Elimina alguno de los poroductos existentes, recuerda que una vez borrado no se podra recuperar.</p>
+							<p class="textoNormal1">Elimina alguno de los productos existentes, recuerda que una vez borrado no se podra recuperar.</p>
 						</td>
 					</tr>
 					<tr class="fila1">
