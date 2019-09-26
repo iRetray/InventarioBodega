@@ -40,7 +40,7 @@ if (mysqli_query($conexion, $consulta)) {
 <table class="errorHead" align="center">
 	<tr class="error1" align="center">
 		<td>
-			<img src="../../resources/sale.jpgs" class="imgErrorA">
+			<img src="../../resources/sale.jpg" class="imgErrorA">
 		</td>
 		<td class="padding1">
 			<p class="textoErrorG">Producto eliminado correctamente</p> <br>
