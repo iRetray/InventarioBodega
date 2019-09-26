@@ -9,12 +9,14 @@ if($nombre==""){
 $productoAntiguo = $_POST['productoAntiguo'];
 $productoNuevo = $_POST['productoNuevo'];
 $precio = $_POST['precio'];
-$tipo = $_POST['tipo'];
+$tipoNuevo = $_POST['tipo'];
+
+$tipoAntiguo="";
 
 $_SESSION['productoAntiguo'] = $productoAntiguo;
 $_SESSION['productoNuevo'] = $productoNuevo;
 $_SESSION['precio'] = $precio;
-$_SESSION['tipo'] = $tipo;
+$_SESSION['tipoNuevo'] = $tipoNuevo;
 
 $usuarioEncontrado = false;
 
@@ -24,6 +26,7 @@ while ($columna = mysqli_fetch_array( $resultado ))
 {
 	if ($columna['producto']==$productoAntiguo) {
 		$usuarioEncontrado = true;
+		$tipoAntiguo = "principal";
 	}
 }
 
@@ -33,6 +36,7 @@ while ($columna = mysqli_fetch_array( $resultado ))
 {
 	if ($columna['producto']==$productoAntiguo) {
 		$usuarioEncontrado = true;
+		$tipoAntiguo = "muebles";
 	}
 }
 
@@ -42,8 +46,11 @@ while ($columna = mysqli_fetch_array( $resultado ))
 {
 	if ($columna['producto']==$productoAntiguo) {
 		$usuarioEncontrado = true;
+		$tipoAntiguo = "talleres";
 	}
 }
+
+$_SESSION['tipoAntiguo'] = $tipoAntiguo;
 
 if($usuarioEncontrado == true){
 	header("Location:actualizarUsuarioCorrecto.php");
