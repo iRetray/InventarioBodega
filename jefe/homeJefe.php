@@ -94,7 +94,7 @@ if($nombre==""){
 					<tr class="fila1">
 						<td class="columna22">
 							<div align="center">
-							<form action="actualizarUsuario.php" method="post">
+							<form action="actualizar/actualizarUsuario.php" method="post">
 									<input type="image" src="../resources/update.png" width="100px" align="center" class="imgTop">
 
 									<p class="textoOscuro" align="center">Actualizar producto</p>

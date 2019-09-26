@@ -1,4 +1,4 @@
-<?php  
+<?php
 include('../../extPages/conexion.php');
 session_start();
 $nombre = $_SESSION['nombre'];
@@ -6,24 +6,43 @@ if($nombre==""){
 	header("Location:../../extPages/sesion.php");
 }
 
-$usuarioAnterior = $_POST['usuario'];
-$usuarioCambio = $_POST['usuarioNuevo'];
-$claveCambio = $_POST['clave'];
-$tipoCambio = $_POST['tipo'];
+$productoAntiguo = $_POST['productoAntiguo'];
+$productoNuevo = $_POST['productoNuevo'];
+$precio = $_POST['precio'];
+$tipo = $_POST['tipo'];
 
-$_SESSION['usuarioCambio'] = $usuarioCambio;
-$_SESSION['claveCambio'] = $claveCambio;
-$_SESSION['tipoCambio'] = $tipoCambio;
-$_SESSION['usuarioAnterior'] = $usuarioAnterior;
+$_SESSION['productoAntiguo'] = $productoAntiguo;
+$_SESSION['productoNuevo'] = $productoNuevo;
+$_SESSION['precio'] = $precio;
+$_SESSION['tipo'] = $tipo;
 
-$consulta = "SELECT * FROM `usuarios` WHERE 1";
-$resultado = mysqli_query($conexion, $consulta);
 $usuarioEncontrado = false;
+
+$consulta = "SELECT * FROM `bodegaprincipal` WHERE 1";
+$resultado = mysqli_query($conexion, $consulta);
 while ($columna = mysqli_fetch_array( $resultado ))
 {
-	if ($columna['usuario']==$usuarioAnterior) {
+	if ($columna['producto']==$productoAntiguo) {
 		$usuarioEncontrado = true;
-	}		
+	}
+}
+
+$consulta = "SELECT * FROM `bodegamuebles` WHERE 1";
+$resultado = mysqli_query($conexion, $consulta);
+while ($columna = mysqli_fetch_array( $resultado ))
+{
+	if ($columna['producto']==$productoAntiguo) {
+		$usuarioEncontrado = true;
+	}
+}
+
+$consulta = "SELECT * FROM `bodegatalleres` WHERE 1";
+$resultado = mysqli_query($conexion, $consulta);
+while ($columna = mysqli_fetch_array( $resultado ))
+{
+	if ($columna['producto']==$productoAntiguo) {
+		$usuarioEncontrado = true;
+	}
 }
 
 if($usuarioEncontrado == true){

@@ -1,26 +1,29 @@
-<?php  
+<?php
 include('../../extPages/conexion.php');
 session_start();
 $nombre = $_SESSION['nombre'];
 if($nombre==""){
 	header("Location:../../extPages/sesion.php");
 }
-$usuarioCambio = $_SESSION['usuarioCambio'];
-$claveCambio = $_SESSION['claveCambio'];
-$tipoCambio = $_SESSION['tipoCambio'];
-$usuarioAnterior = $_SESSION['usuarioAnterior'];
+$productoAntiguo = $_SESSION['productoAntiguo'];
+$productoNuevo = $_SESSION['productoNuevo'];
+$precio = $_SESSION['precio'];
+$tipo = $_SESSION['tipo'];
 
 $tipoUsuario = "";
-if ($tipoCambio == "jefe") {
+if ($tipoCambio == "principal") {
+	$tipoUsuario = 1;
+	$consulta = "INSERT INTO `bodegaprincipal` (`producto`, `valor`, `cantidad`) VALUES ('$productoCambio','$precioCambio','1')";
+}
+if ($tipoCambio == "talleres") {
 	$tipoUsuario = 2;
+	$consulta = "INSERT INTO `bodegatalleres` (`producto`, `valor`, `cantidad`) VALUES ('$productoCambio','$precioCambio','1')";
 }
-if ($tipoCambio == "almacen") {
+if ($tipoCambio == "muebles") {
 	$tipoUsuario = 3;
+	$consulta = "INSERT INTO `bodegamuebles` (`producto`, `valor`, `cantidad`) VALUES ('$productoCambio','$precioCambio','1')";
 }
 
-
-
-$consulta = "UPDATE usuarios SET usuario='$usuarioCambio', `clave`='$claveCambio', tipoUsuario='$tipoUsuario' WHERE usuario='$usuarioAnterior'";
 if (mysqli_query($conexion, $consulta)) {
 
 } else {
@@ -33,8 +36,8 @@ if (mysqli_query($conexion, $consulta)) {
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="../../css/estilos.css">
-	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<title>Creacion correcta</title>
 </head>
 <body class="errorFondo">

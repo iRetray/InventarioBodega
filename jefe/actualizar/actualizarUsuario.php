@@ -25,46 +25,47 @@ if($nombre==""){
 	<link rel="stylesheet" type="text/css" href="../../css/estilos.css">
 	<link href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-	<title>Actualizar usuario</title>
+	<title>Actualizar producto</title>
 </head>
 <body>
 <section class="section" align="center">
 	<table class="tablaCrear" align="center">
 		<tr class="fila1" align="center">
 			<td class="columna1">
-				<p class="textosGrandes">Actualizar un usuario</p>
-				<p class="textoNormal">Completa los campos para actualizar los datos de un usuario:</p>
+				<p class="textosGrandes">Actualizar un producto</p>
+				<p class="textoNormal">Completa los campos para actualizar los datos de un producto:</p>
 			</td>
 		</tr>
 		<form action="actualizarUsuarioVerificar.php" method="post" id="form1">
 		<tr class="fila1">
 			<td class="columna1" align="center">
-				<input type="text" name="usuario" id="usuario" placeholder="Usuario antiguo del empleado" class="cajasRegistro" required="true">
-				<input type="text" name="usuarioNuevo" id="usuarioNuevo" placeholder="Usuario nuevo del empleado" class="cajasRegistro" required="true">
-				<input type="text" name="clave" id="clave" placeholder="Clave nueva del empleado" class="cajasRegistro" required="true">
-			</td>		
+				<input type="text" name="productoAntiguo" id="productoAntiguo" placeholder="Nombre antiguo del producto" class="cajasRegistro" required="true">
+				<input type="text" name="productoNuevo" id="productoNuevo" placeholder="Nombre nuevo del producto" class="cajasRegistro" required="true">
+				<input type="text" name="precio" id="precio" placeholder="Precio nuevo del producto" class="cajasRegistro" required="true">
+			</td>
 		</tr>
 		<tr class="fila1" align="center">
 			<td class="columna1">
-				<p class="textoNormal">Selecciona el nuevo rol del empleado:</p>
+				<p class="textoNormal">Selecciona la bodega donde se almacenara el producto:</p>
 			</td>
 		</tr>
 		<tr class="fila1" >
 
 			<td class="columna1" align="center">
 				<select name="tipo" class="cajasRegistro3" form="form1">
-					<option value="jefe" class="cajasRegistro">Jefe de inventario</option>
-					<option value="almacen" class="cajasRegistro">Almacenista</option>
+					<option value="principal" class="cajasRegistro">Bodega principal</option>
+					<option value="talleres" class="cajasRegistro">Bodega de talleres</option>
+					<option value="muebles" class="cajasRegistro">Bodega de muebles</option>
 				</select>
 			</td>
 		</tr>
-		
+
 		<tr>
 			<td>
 				<br>
 			</td>
 		</tr>
-		
+
 		<tr>
 			<td>
 				<br>
@@ -72,7 +73,7 @@ if($nombre==""){
 		</tr>
 		<tr class="fila1">
 			<td class="columna1" align="center">
-				<input type="submit" value="Crear usuario" class="cajasRegistro22" required="true">
+				<input type="submit" value="Actualizar producto" class="cajasRegistro22" required="true">
 			</td>
 		</tr>
 		<tr>
