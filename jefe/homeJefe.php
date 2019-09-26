@@ -68,12 +68,12 @@ if($nombre==""){
 							<form action="crear/crearUsuario.php" method="post">
 									<input type="image" src="../resources/add.png" width="100px" align="center" class="imgTop">
 
-									<p class="textoOscuro" align="center">Crear usuario</p>
+									<p class="textoOscuro" align="center">Crear producto</p>
 							</form>
 							</div>
 						</td>
 						<td class="columna22b">
-							<p class="textoNormal1">Crea un nuevo usuario para que sea parte de tu empresa, puedes clasificarlo segun su trabajo en jefe de inventario o almacenista.</p>
+							<p class="textoNormal1">Crea un nuevo producto para que este disponible en el inventario, puedes clasificarlo segun su clase en bodegas especificas.</p>
 						</td>
 					</tr>
 
@@ -83,12 +83,12 @@ if($nombre==""){
 							<form action="eliminarUsuario.php" method="post">
 									<input type="image" src="../resources/borrar.png" width="100px" align="center" class="imgTop">
 
-									<p class="textoOscuro" align="center">Eliminar usuario</p>
+									<p class="textoOscuro" align="center">Eliminar producto</p>
 							</form>
 						</div>
 						</td>
 						<td class="columna22b">
-							<p class="textoNormal1">Elimina alguno de tus trabajadores existentes, recuerda que una vez borrado no se podra recuperar.</p>
+							<p class="textoNormal1">Elimina alguno de los poroductos existentes, recuerda que una vez borrado no se podra recuperar.</p>
 						</td>
 					</tr>
 					<tr class="fila1">
@@ -96,16 +96,16 @@ if($nombre==""){
 							<div align="center">
 							<form action="actualizarUsuario.php" method="post">
 									<input type="image" src="../resources/update.png" width="100px" align="center" class="imgTop">
-	
-									<p class="textoOscuro" align="center">Actualizar usuario</p>
+
+									<p class="textoOscuro" align="center">Actualizar producto</p>
 							</form>
 						</div>
 						</td>
 						<td class="columna22b">
-							<p class="textoNormal1">Actualiza los datos de un trabajador existente, como sus datos de entrada al sistema (usuario y contraseña).</p>
+							<p class="textoNormal1">Actualiza los datos de un producto existente, como su nombre y la bodega donde se almacena.</p>
 						</td>
 					</tr>
-					
+
 				</table>
 			</td>
 		</tr>
